@@ -1,0 +1,13 @@
+p#notice
+  = notice
+p
+  strong
+    | Id:
+  = @blocklist.id
+p
+  strong
+    | Type:
+  = @blocklist.type
+= link_to 'Edit', edit_blocklist_path(@blocklist)
+|  | 
+= link_to 'Back', blocklists_path

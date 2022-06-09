@@ -1,0 +1,53 @@
+// Основные цвета
+$pepper: #181F20;
+$palo-santo: #EB640A;
+$peony: #FAA8D6;
+$cotton: #F7FAE5;
+$pine: #044E40;
+$soap: #F25F9C;
+$guacamole: #A89D00;
+$linen: #C3DAAA;
+$coffee: #784721;
+$balcone: #47A2AE;
+
+.pepper { color: $pepper !important; }
+.palo-santo { color: $palo-santo !important; }
+.peony { color: $peony !important; }
+.cotton { color: $cotton !important; }
+.pine { color: $pine !important; }
+.soap { color: $soap !important; }
+.guacamole { color: $guacamole !important; }
+.linen { color: $linen !important; }
+.coffee { color: $coffee !important; }
+.balcony { color: $balcony !important; }
+
+// Background точно также
+$bg-main: #FFFFFF;
+$bg-secondary: #F4F5F6;
+$bg-tertiary: #E8EDED;
+$bg-tertiary-hover: #EEF1F1;
+$bg-interactive: #F9E7D7;
+
+.bg-main { background-color: $bg-main !important; }
+.bg-secondary { background-color: $bg-secondary !important; }
+.bg-tertiary { background-color: $bg-tertiary !important; }
+.bg-tertiary-hover { background-color: $bg-tertiary-hover !important; }
+.bg-interactive { background-color: $bg-interactive !important; }
+
+// Font точно также
+$text-secondary: #A6B8BA;
+$text-secondary-hover: #718B8D;
+$text-inactive: #CFD8D9;
+
+.text-secondary { color: $text-secondary !important; }
+.text-secondary-hover { color: $text-secondary-hover !important; }
+.text-inactive { color: $text-inactive !important; }
+
+// Objective
+$dividers: #E0E6E7;
+$danger: #D71342;
+$danger-disabled: #E0E6E7;
+
+.dividers { color: $dividers !important; }
+.danger { color: $danger !important; }
+.danger-disabled { color: $danger-disabled !important; }

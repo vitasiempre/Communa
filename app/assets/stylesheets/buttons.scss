@@ -1,0 +1,24 @@
+@import "fonts";
+@import "colors";
+
+// кнопка — высота + ширина = размер;
+@mixin l_button_font { @include font_settings(18px, 24px) }
+.l_button_font { @include l_button_font; }
+@mixin m_button_font { @include font_settings(16px, 28px) }
+@mixin s_button_font { @include font_settings(14px, 20px) }
+
+// Цветт + состояние цвета
+@mixin button_colors($background, $font_color, $hover, $hover_font) {
+  background-color: $background;
+  color: $font_color;
+  &:hover {
+    cursor: pointer;
+    background-color: $hover;
+    color: $hover_font;
+  }
+}
+
+// дать название кнопки с цветом: palo-santo_button
+// hover — цвет при наведении
+.palo-santo_button { button_colors($palo-santo, $pepper, $peony, $pepper) }
+// и так далее

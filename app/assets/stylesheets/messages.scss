@@ -1,0 +1,24 @@
+.messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+
+  .message {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: blue;
+    color: white;
+    margin-top: 16px;
+    width: 200px;
+
+    &.currentUser {
+      background-color: #ededed;
+      align-self: flex-end;
+      color: black;
+    }
+  }
+
+  .user_name {
+  }
+}

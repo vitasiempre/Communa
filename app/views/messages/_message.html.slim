@@ -1,0 +1,8 @@
+| <div class="message 
+= message.user == current_user ? 'currentUser' : ''
+| "> 
+p.user_name
+  = message.user.profile.name
+div
+  = message.body
+= message.created_at

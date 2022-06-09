@@ -1,0 +1,25 @@
+// импортируйте свои шрифты
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&display=swap');
+@import "colors";
+
+h1, h2, h3, h4, p, a,
+.h1, .h2, .h3, .h4, .p, .p2, .p3, .p4,
+div {
+  font-family: 'Manrope', sans-serif;
+}
+
+// Вес
+h1, button, .button, .p3 { font-weight: 600; }
+h2 { font-weight: 800; }
+a, .a, p, .p, .p2 .p3 { font-weight: 500; }
+
+// Размер
+@mixin font_settings($size, $height) { font-size: $size; line-height: $height; }
+h1 { @include font_settings(44px, 44px); }
+h2 { @include font_settings(16px, 17.16px); }
+button, .button, a, .a, p, .p { @include font_settings(16px, 22px); }
+.p2 { @include font_settings(14px, 20px); }
+.p3 { @include font_settings(14px, 22px); }
+
+// Стили
+.underline { text-decoration: underline; }

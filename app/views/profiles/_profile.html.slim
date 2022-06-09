@@ -1,0 +1,9 @@
+h2
+  = link_to profile.name , profile
+p
+  = profile.user_id
+div
+  = link_to 'Edit', edit_profile_path(profile) if can? :update, profile
+  = link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, profile
+br
+br

@@ -1,0 +1,9 @@
+- chat_members = chat.users.ids
+- chat_members.delete(current_user.id)
+- other_user = User.where(id: chat_members).first.profile
+= image_tag other_user.avatar_url(:thumb) if other_user.avatar_url != nil
+h2
+  = link_to other_user.name, chat
+= link_to 'Destroy', chat, method: :delete, data: { confirm: 'Are you sure?' }
+br
+br

@@ -1,0 +1,15 @@
+= form_with(model: favourite) do |form|
+  - if favourite.errors.any?
+    #error_explanation
+      h2
+        = pluralize(favourite.errors.count, "error")
+        |  prohibited this favourite from being saved:
+      ul
+        - favourite.errors.each do |error|
+          li
+            = error.full_message
+  .field
+    = form.label :id
+    = form.number_field :id
+  .actions
+    = form.submit

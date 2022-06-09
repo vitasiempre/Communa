@@ -1,0 +1,12 @@
+= form_with(model: chat_list_item) do |form|
+  - if chat_list_item.errors.any?
+    #error_explanation
+      h2
+        = pluralize(chat_list_item.errors.count, "error")
+        |  prohibited this chat_list_item from being saved:
+      ul
+        - chat_list_item.errors.each do |error|
+          li
+            = error.full_message
+  .actions
+    = form.submit

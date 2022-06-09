@@ -1,0 +1,5 @@
+- chat_members.delete(current_user.id)
+- other_user = User.where(id: chat_members).first.profile
+= render partial: "application/avatar", :locals => {:profile => other_user}
+h2
+  = link_to other_user.name, chat

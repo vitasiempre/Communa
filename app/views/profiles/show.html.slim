@@ -1,0 +1,97 @@
+p#notice
+  = notice
+p
+  strong
+    | Id:
+  = @profile.id
+p
+  strong
+    | Avatar:
+  = image_tag @profile.avatar_url
+p
+  strong
+    | Name:
+  = @profile.name
+p
+  strong
+    | Age:
+  = @profile.age
+p
+  strong
+    | User:
+  = @profile.user_id
+p
+  strong
+    | Visible:
+  = @profile.visibility
+p
+  strong
+    | Gender:
+  = @profile.gender
+p
+  strong
+    | Destination city:
+  = @profile.destination_city
+p
+  strong
+    | Tidiness:
+  = @profile.tidiness
+p
+  strong
+    | Partyness:
+  = @profile.partyness
+p
+  strong
+    | Time at home:
+  = @profile.time_at_home
+p
+  strong
+    | Description:
+  = @profile.description
+p
+  strong
+    | interests:
+  = @profile.interests
+p
+  strong
+    | work_field:
+  = @profile.work_field
+p
+  strong
+    | queer_friendly:
+  = @profile.queer_friendly
+p
+  strong
+    | recycle:
+  = @profile.recycle
+p
+  strong
+    | smoking:
+  = @profile.smoking
+p
+  strong
+    | diet:
+  = @profile.diet
+p
+  strong
+    | daily_regime:
+  = @profile.daily_regime
+p
+  strong
+    | communicativeness:
+  = @profile.communicativeness
+p
+  strong
+    | instagram_link:
+  = @profile.instagram_link
+p
+  strong
+    | vk_link:
+  = @profile.vk_link
+p
+  strong
+    | facebook_link:
+  = @profile.facebook_link
+div
+  = link_to 'Edit', edit_profile_path(@profile) if can? :update, @profile
+  = link_to 'Destroy', @profile, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, @profile

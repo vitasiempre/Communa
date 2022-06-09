@@ -1,0 +1,80 @@
+= form_for @profile, html: { multipart: true } do |form|
+  - if profile.errors.any?
+    #error_explanation
+      h2
+        = pluralize(profile.errors.count, "error")
+        |  prohibited this profile from being saved:
+      ul
+        - profile.errors.each do |error|
+          li
+            = error.full_message
+  .field
+    = form.label :avatar
+    = form.file_field :avatar
+  .field
+    = form.label :name
+    = form.text_field :name
+  .field
+    = form.label :age
+    = form.number_field :age
+  - # commented line
+  .field
+    = form.label :user_id
+    = form.text_field :user_id
+  .field
+    = form.label :visibility
+    = form.check_box :visibility
+  .field
+    = form.label :gender
+    = form.text_area :gender
+  .field
+    = form.label :destination_city
+    = form.text_area :destination_city
+  .field
+    = form.label :tidiness
+    = form.range_field :tidiness, in: 1..10
+  .field
+    = form.label :partyness
+    = form.range_field :partyness, in: 1..10
+  .field
+    = form.label :time_at_home
+    = form.range_field :time_at_home
+  .field
+    = form.label :description
+    = form.text_field :description
+  .field
+    = form.label :interests
+    = form.text_field :interests
+  .field
+    = form.label :work_field
+    = form.text_field :work_field
+  .field
+    = form.label :queer_friendly
+    = form.check_box :queer_friendly
+  .field
+    = form.label :recycle
+    = form.text_field :recycle
+  .field
+    = form.label :smoking
+    = form.check_box :smoking
+  .field
+    = form.label :diet
+    = form.text_field :diet
+  .field
+    = form.label :daily_regime
+    = form.range_field :daily_regime
+  .field
+    = form.label :communicativeness
+    = form.range_field :communicativeness, in: 1..10
+  .field
+    = form.label :instagram_link
+    = form.url_field :instagram_link
+  .field
+    = form.label :vk_link
+    = form.url_field :vk_link
+  .field
+    = form.label :facebook_link
+    = form.url_field :facebook_link
+  - # commented line
+  .actions
+    = form.submit

@@ -1,0 +1,15 @@
+@mixin icon_sq($url, $size) {
+  background: url($url) no-repeat center;
+  width: $size;
+  height: $size;
+}
+
+.search { @include icon_sq("icons/search.svg", 24px); }
+.sign { @include icon_sq("icons/sign.svg", 36px); }
+.signed { @include icon_sq("icons/signed.svg", 36px); }
+.shopping_basket { @include icon_sq("icons/shopping_basket.svg", 24px); }
+.favorite { @include icon_sq("icons/favorite.svg", 24px); }
+.favorite_purple { @include icon_sq("icons/favorite_purple.svg", 24px); }
+.uploader_icon { @include icon_sq("icons/uploader_icon.svg", 24px); }
+.clear { @include icon_sq("icons/clear.svg", 14px); }
+.close { @include icon_sq("icons/close.svg", 14px); }

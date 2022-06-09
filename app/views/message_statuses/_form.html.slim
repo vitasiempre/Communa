@@ -1,0 +1,12 @@
+= form_with(model: message_status) do |form|
+  - if message_status.errors.any?
+    #error_explanation
+      h2
+        = pluralize(message_status.errors.count, "error")
+        |  prohibited this message_status from being saved:
+      ul
+        - message_status.errors.each do |error|
+          li
+            = error.full_message
+  .actions
+    = form.submit
