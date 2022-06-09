@@ -16,6 +16,7 @@
 
  @import "colors";
  @import "fonts";
+ @import "icons";
 
  *, *::before, *::after, *:focus, *:valid {
    box-sizing: border-box;

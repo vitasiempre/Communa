@@ -2,17 +2,27 @@
 @import "colors";
 
 // кнопка — высота + ширина = размер;
-@mixin l_button_font { @include font_settings(18px, 24px) }
-.l_button_font { @include l_button_font; }
-@mixin m_button_font { @include font_settings(16px, 28px) }
-@mixin s_button_font { @include font_settings(14px, 20px) }
+@mixin button_size($height, $radius) {
+  height: $height;
+  border-radius: $radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// .button_font { @include l_button_font; }
+// @mixin l_button_font { @include font_settings(18px, 24px) }
+
 
 // Цветт + состояние цвета
-@mixin button_colors($background, $font_color, $hover, $hover_font) {
+@mixin button_colors($background, $font_color, $hover, $hover_font, $disabled, $disabled_font) {
   background-color: $background;
   color: $font_color;
   &:hover {
     cursor: pointer;
+    background-color: $hover;
+    color: $hover_font;
+  };
+  &:disabled {
     background-color: $hover;
     color: $hover_font;
   }
@@ -20,5 +30,95 @@
 
 // дать название кнопки с цветом: palo-santo_button
 // hover — цвет при наведении
-.palo-santo_button { button_colors($palo-santo, $pepper, $peony, $pepper) }
+.primary_action_button {
+  @include button_size(60px, 30px);
+  @include button_colors($palo-santo, $pepper, $peony, $pepper, $bg-secondary, $text-inactive);
+  @include font_settings(16px, 22px, -0.015em, 600, none)
+}
+
+.default_button, .redirect_button {
+  @include button_size(60px, 30px);
+  @include button_colors($pepper, $bg-main, $palo-santo, $bg-main, $bg-secondary, $text-inactive);
+  @include font_settings(16px, 22px, -0.015em, 600, none)
+}
+
+.secondary_button {
+  @include button_size(60px, 30px);
+  @include button_colors($bg-tertiary, $pepper, $pepper, $bg-main, $bg-secondary, $text-inactive);
+  @include font_settings(16px, 22px, -0.015em, 600, none)
+}
+
+.tertiary_button {
+  @include button_size(60px, 30px);
+  @include button_colors(none, $palo-santo, none, $soap, none, $bg-interactive,);
+  @include font_settings(16px, 22px, -0.015em, 600, none)
+}
+
+.danger_button {
+  @include button_size(60px, 30px);
+  @include button_colors($danger, $bg-main, $soap, $bg-main, $danger-disabled, $bg-main);
+  @include font_settings(16px, 22px, -0.015em, 600, none)
+}
+
+.danger_secondary_button {
+  @include button_size(60px, 30px);
+  @include button_colors(none, $danger, none, $soap, none, $danger-disabled);
+  @include font_settings(16px, 22px, -0.015em, 600, none)
+}
+
+.chat_button {
+  @include button_size(60px, 0px);
+  @include button_colors($palo-santo, $pepper, $peony, $pepper, $bg-secondary, $text-inactive);
+  @include font_settings(16px, 22px, -0.015em, 600, none)
+}
+
+.chat_secondary_button {
+  @include button_size(60px, 0px);
+  @include button_colors($bg-tertiary, $text-secondary, $bg-tertiary, $text-secondary-hover, $bg-tertiary, $text-inactive);
+  @include font_settings(16px, 22px, -0.015em, 600, none)
+}
+
+.like_button {
+  @include button_size(81px, 24px);
+  @include button_colors($bg-interactive, $palo-santo, $palo-santo, $bg-interactive, $bg-interactive, $text-interactive-inactive);
+}
+
+.icon_button {
+  @include button_size(40px, 20px);
+  @include button_colors($palo-santo, $bg-main, $peony, $bg-main, $bg-secondary, $text-secondary);
+}
+
+.icon_secondary_button {
+  @include button_size(40px, 20px);
+  background-color: $bg-main;
+  border: 2px $bg-tertiary solid;
+  color: $text-secondary;
+  &:hover {
+    color: $palo-santo;
+  }
+  &:disabled {
+    color: $text-inactive;
+  }
+}
+
+.icon_tertiary_button {
+  @include button_size(20px, 0px);
+  color: $text-secondary;
+  &:hover {
+    color: $text-secondary-hover;
+  }
+  &:disabled {
+    color: $text-inactive;
+  }
+}
+
+.scroll_button {
+  @include button_size(24px, 12px);
+  @include button_colors($bg-secondary, $text-secondary, $bg-secondary, $text-secondary-hover,$bg-secondary, $text-inactive);
+}
+
+.upload_button {
+  @include button_size(208px, 12px);
+  @include button_colors($bg-secondary, $text-secondary, $bg-secondary, $text-secondary-hover,$bg-secondary, $text-inactive);
+}
 // и так далее

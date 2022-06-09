@@ -4,12 +4,34 @@
   height: $size;
 }
 
-.search { @include icon_sq("icons/search.svg", 24px); }
-.sign { @include icon_sq("icons/sign.svg", 36px); }
-.signed { @include icon_sq("icons/signed.svg", 36px); }
-.shopping_basket { @include icon_sq("icons/shopping_basket.svg", 24px); }
-.favorite { @include icon_sq("icons/favorite.svg", 24px); }
-.favorite_purple { @include icon_sq("icons/favorite_purple.svg", 24px); }
-.uploader_icon { @include icon_sq("icons/uploader_icon.svg", 24px); }
-.clear { @include icon_sq("icons/clear.svg", 14px); }
-.close { @include icon_sq("icons/close.svg", 14px); }
+.attach { @include icon_sq("icons/AddAttachment.svg", 24px); }
+.add_tag { @include icon_sq("icons/AddCustomTagDefault.svg", 16px); }
+.add_tag_hover { @include icon_sq("icons/AddCustomTagHover.svg", 16px); }
+.add_user { @include icon_sq("icons/AddUser.svg", 24px); }
+.apple_logo { @include icon_sq("icons/AppleLogo.svg", 24px); }
+.close_window { @include icon_sq("icons/CloseWindow.svg", 24px); }
+.delete_custom_tag { @include icon_sq("icons/DeleteCustomTag.svg", 16px); }
+.dislike { @include icon_sq("icons/Dislike.svg", 24px); }
+.edit { @include icon_sq("icons/Edit.svg", 16px); }
+.error_red { @include icon_sq("icons/ErrorRed.svg", 18px); }
+.error_white { @include icon_sq("icons/ErrorWhite.svg", 18px); }
+.facebook { @include icon_sq("icons/Facebook.svg", 20px); }
+.friendly { @include icon_sq("icons/Friendly.svg", 24px); }
+.go_back { @include icon_sq("icons/GoBack.svg", 20px); }
+.google { @include icon_sq("icons/GoogleLogo.svg", 24px); }
+.instagram { @include icon_sq("icons/Instagram.svg", 20px); }
+.like { @include icon_sq("icons/Like.svg", 27px); }
+.logo { @include icon_sq("icons/LogoDefault.svg", 64px); }
+.logo_cotton { @include icon_sq("icons/LogoLight.svg", 64px); }
+.looking_for { @include icon_sq("icons/LookingFor.svg", 24px); }
+.more { @include icon_sq("icons/More.svg", 24px); }
+.notifications_default { @include icon_sq("icons/NotificationsDefault.svg", 20px); }
+.notifications_new { @include icon_sq("icons/NotificationsNew.svg", 20px); }
+.notifications_hover { @include icon_sq("icons/NotificationsHover.svg", 20px); }
+.online { @include icon_sq("icons/Online.svg", 20px); }
+.other { @include icon_sq("icons/Other.svg", 20px); }
+.pets { @include icon_sq("icons/Pets.svg", 24px); }
+.scroll { @include icon_sq("icons/Scroll.svg", 16px); }
+.send { @include icon_sq("icons/Send.svg", 24px); }
+.settings { @include icon_sq("icons/Settings.svg", 20px); }
+.smoke { @include icon_sq("icons/Smoke.svg", 24px); }
