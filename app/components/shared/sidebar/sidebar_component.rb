@@ -1,6 +1,6 @@
 module Shared
   module Sidebar
-    class Component < ViewComponent::Base
+    class SidebarComponent < ViewComponent::Base
       def initialize(current_user:)
         @current_user = current_user
       end

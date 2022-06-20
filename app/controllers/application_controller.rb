@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
       format.html { redirect_to root_path, alert: exception.message }
     end
   end
+
+  def after_sign_in_path_for(users)
+   profiles_path
+ end
 end

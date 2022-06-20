@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'pages#welcome'
+  root 'devise/session#new'
 
   devise_for :users
   resources :chat_list_items

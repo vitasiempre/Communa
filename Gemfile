@@ -16,6 +16,7 @@ gem 'mini_magick'
 gem 'slim-rails'
 gem 'html2slim'
 gem 'redis', '~> 4.0'
+gem "view_component"
 
 # gem 'bootsnap', '>= 1.1.0', require: false
 
