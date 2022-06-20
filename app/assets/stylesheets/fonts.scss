@@ -12,7 +12,7 @@ div {
 @mixin font_settings($size, $height, $letter-spacing, $weight, $text-transform) { font-size: $size; line-height: $height; letter-spacing: $letter-spacing; font-weight: $weight; text-transform: $text-transform}
 .seed { @include font_settings(44px, 44px, -0.03em, 600, none); }
 .navigation { @include font_settings(16px, 110%, -0.01em, 600, uppercase); }
-.body { @include font_settings(16px, 22px, -0.01em, 500, none); }
+@mixin body { @include font_settings(16px, 22px, -0.01em, 500, none); }
 .button_text { @include font_settings(16px, 22px, -0.015em, 600, none); }
 .footnote { @include font_settings(14px, 20px, -0.01em, 500, none); }
 .footnote_medium { @include font_settings(14px, 20px, -0.01em, 600, none); }

@@ -1,0 +1,65 @@
+@import "colors";
+@import "fonts";
+@import "atoms";
+@import "icons";
+
+@mixin default_input($padding, $padding-r, $padding-l, $width) {
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: transparent;
+
+  // размеры
+  height: 60px;
+  width: $width;
+  padding: $padding $padding-r $padding $padding-l;
+  // шрифт
+  color: $pepper;
+  @include body;
+  &::placeholder { color: $text-inactive; @include body; }
+  // border
+  @include input_border;
+  border: 2px solid $bg-tertiary;
+
+  &:focus { border-color: $pepper; }
+  // &:hover { border: 1px solid $gray1; color: $gray1; }
+  &:invalid {
+    border: 2px solid $danger;
+    &::placeholder { color: $danger; }
+  }
+
+}
+// DEFAULT INPUT
+
+.default_input { @include default_input(13px, 169px, 24px, 424px); }
+textarea { min-height: 160px; @include textarea_border; }
+
+.chat_input {
+  display: inline-flex;
+  justify-content: end;
+  align-items: center;
+
+  .round_input {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    @include round(52px, $bg-tertiary, transparent);
+    margin-right: 4px;
+  }
+}
+
+// отключает автофилльную подсветку
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: #FFFFFF;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}

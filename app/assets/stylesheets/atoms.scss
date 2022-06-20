@@ -1,0 +1,14 @@
+$border-width: 2px;
+
+@mixin square($size) { width: $size; height: $size }
+@mixin default_border { border-radius: 900px; }
+@mixin border_none { border-radius: none; }
+@mixin input_border { border-radius: 90px; }
+@mixin textarea_border { border-radius: 30px !important; }
+@mixin text_left { text-align: left; }
+@mixin round($size, $color, $border-color) {
+  border-radius: 50%;
+  @include square($size);
+  background-color: $color;
+  border: $border-width solid $border-color;
+}
