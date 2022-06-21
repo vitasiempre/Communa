@@ -6,9 +6,9 @@ html
 
   body style="background-color:#EB640A; padding: 20px;"
     .logo
-    div id="card_row"
+    div class="card_row"
       .hero1
-      div id="login_card"
+      div class="login_card"
         .seed
           | Вход
         = form_for(resource, as: resource_name, url: session_path(resource_name), builder: QuestionaryBuilder) do |f|

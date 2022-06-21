@@ -12,7 +12,7 @@
     smoking: true,
     instagram_link: 'http://instagram.com/vitasiempre',
     io: 'public/seed_content/vitaly.jpg',
-    filename: 'vitaly.jpg'
+    filename: 'vitaly.jpeg'
   }, {
     email: 'mila@email.com',
     admin: true,
@@ -26,7 +26,7 @@
     smoking: false,
     instagram_link: 'http://instagram.com/jethappiness',
     io: 'public/seed_content/mila.jpg',
-    filename: 'mila.jpg'
+    filename: 'mila.jpeg'
   }, {
     email: 'eva@email.com',
     admin: true,
@@ -40,7 +40,7 @@
     smoking: false,
     instagram_link: 'http://instagram.com/jethappiness',
     io: 'public/seed_content/eva.jpg',
-    filename: 'eva.jpg'
+    filename: 'eva.jpeg'
   }
 ]
 

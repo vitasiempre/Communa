@@ -1,7 +1,11 @@
-p#notice
-  = notice
-h1
-  | Profiles
-= render @profiles
-br
-= link_to 'New Profile', new_profile_path
+doctype html
+html
+  head
+    title
+      | Коммуна
+
+  body style="background-color:#F4F5F6"
+    = render partial: "menubar"
+
+    .container
+      = yield

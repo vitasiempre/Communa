@@ -22,7 +22,7 @@
    box-sizing: border-box;
  }
 
- #card_row {
+ .card_row {
    width: calc(100vw - 40px);
    height: calc(100vh - (100vw - 40px) * 0.15357 - 60px);
    display: flex;
@@ -30,7 +30,7 @@
    gap: 8px;
  }
 
- #login_card {
+ .login_card {
    width: 450px;
    background-color: white;
    border-radius: 24px;
@@ -70,4 +70,55 @@
    border-radius: 24px;
    background-image: url("hero2.jpeg");
    background-size: cover;
+ }
+
+ .menubar {
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+ }
+
+ .profile {
+   background-color: white;
+   padding: 20px;
+   border-radius: 0px 0px 24px 24px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .recognition {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 16px;
+ }
+
+ .profile_buttons {
+   display: flex;
+   flex-direction: row;
+   gap: 8px;
+ }
+
+ .matches {
+   height: 185px;
+   background-color: white;
+   padding: 20px;
+   border-radius: 24px;
+   width: 100%;
+ }
+
+ .messages {
+   height: 100%;
+   background-color: white;
+   padding: 20px;
+   border-radius: 24px;
+   width: 100%;
+ }
+
+ .container {
+   background-color: white;
+   height: 100vh;
  }

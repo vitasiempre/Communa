@@ -25,13 +25,13 @@
 .logo_cotton { @include icon_sq("icons/LogoLight.svg", 64px); }
 .looking_for { @include icon_sq("icons/LookingFor.svg", 24px); }
 .more { @include icon_sq("icons/More.svg", 24px); }
-.notifications_default { @include icon_sq("icons/NotificationsDefault.svg", 20px); }
-.notifications_new { @include icon_sq("icons/NotificationsNew.svg", 20px); }
-.notifications_hover { @include icon_sq("icons/NotificationsHover.svg", 20px); }
+.notifications_default { @include icon_sq("icons/NotificationsDefault.svg", 40px); }
+.notifications_new { @include icon_sq("icons/NotificationsNew.svg", 40px); }
+.notifications_hover { @include icon_sq("icons/NotificationsHover.svg", 40px); }
 .online { @include icon_sq("icons/Online.svg", 20px); }
 .other { @include icon_sq("icons/Other.svg", 20px); }
 .pets { @include icon_sq("icons/Pets.svg", 24px); }
 .scroll { @include icon_sq("icons/Scroll.svg", 16px); }
 .send { @include icon_sq("icons/Send.svg", 24px); }
-.settings { @include icon_sq("icons/Settings.svg", 20px); }
+.settings { @include icon_sq("icons/Settings.svg", 40px); }
 .smoke { @include icon_sq("icons/Smoke.svg", 24px); }

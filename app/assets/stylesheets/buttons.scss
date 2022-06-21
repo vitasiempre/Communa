@@ -98,6 +98,7 @@
   color: $text-secondary;
   &:hover {
     color: $palo-santo;
+    border: 2px $text-inactive solid;
   }
   &:disabled {
     color: $text-inactive;

@@ -76,6 +76,7 @@ textarea { min-height: 160px; @include textarea_border; }
   -moz-appearance: none;
   -o-appearance: none;
   appearance:none;
+  cursor: pointer;
   &:checked {
     background-color: $palo-santo;
   }

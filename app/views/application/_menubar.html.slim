@@ -1,3 +1,18 @@
-= render 'admin_menu' if can? :manage, Profile
-= render 'user_menu' if current_user
-= render 'devise'
+.menubar
+  .profile
+    .recognition
+      .avatar_big
+      .button_text
+        = link_to current_user.profile.name, edit_user_path(current_user), class: 'invisible_link'
+
+    .profile_buttons
+      = link_to '', edit_user_path(current_user), class: 'icon_secondary_button settings'
+      = link_to '', edit_user_path(current_user), class: 'icon_secondary_button notifications_default'
+
+  .matches
+    .navigation НОВЫЕ ПАРЫ
+  .messages
+    .navigation СООБЩЕНИЯ
+
+  /  - if current_user.profile.avatar.present?
+  /    = image_tag(current_user.profile.avatar, class: 'menu_item_icon')
