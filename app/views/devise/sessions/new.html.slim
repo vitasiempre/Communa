@@ -1,10 +1,10 @@
 .seed
-  | Войти
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  | Вход
+= form_for(resource, as: resource_name, url: session_path(resource_name), builder: QuestionaryBuilder) do |f|
   .field
     = f.label :email
     br
-    = f.email_field :email, autofocus: true, autocomplete: "email"
+    = f.text_field :email, autofocus: true, autocomplete: "email", class: "input_oneline"
   .field
     = f.label :password
     br

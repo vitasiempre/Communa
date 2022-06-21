@@ -49,6 +49,14 @@ textarea { min-height: 160px; @include textarea_border; }
   }
 }
 
+.input_oneline {
+  height: 60px;
+  background-color: $bg-main;
+  border: 2px solid #bg-tertiary;
+  border-radius: 90px;
+  padding: 0 24px;
+}
+
 // отключает автофилльную подсветку
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
