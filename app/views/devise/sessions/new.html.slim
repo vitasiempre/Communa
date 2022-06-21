@@ -1,31 +1,32 @@
 doctype html
 html
   head
-    title Slim Examples
-    meta name="keywords" content="template language"
-    meta name="author" content=author
-    javascript:
-      alert('Slim supports embedded javascript!')
+    title
+      | Вход
 
-  body
-    div id="login_card"
-      .seed
-        | Вход
-      = form_for(resource, as: resource_name, url: session_path(resource_name), builder: QuestionaryBuilder) do |f|
-        .field
-          = f.label :email, class: "input_label"
-          br
-          = f.text_field :email, autofocus: true, autocomplete: "email", class: "input_oneline", style: "width:423px; margin-bottom:12px"
-        .field
-          = f.label "Пароль", class: "input_label"
-          br
-          = f.password_field :password, autocomplete: "current-password", class: "input_oneline", style: "width:423px; margin-bottom: 24px"
-        - if devise_mapping.rememberable?
+  body style="background-color:#EB640A; padding: 20px;"
+    .logo
+    div id="card_row"
+      .hero1
+      div id="login_card"
+        .seed
+          | Вход
+        = form_for(resource, as: resource_name, url: session_path(resource_name), builder: QuestionaryBuilder) do |f|
           .field
-            = f.check_box :remember_me, class: "checkbox"
-            = f.label "Запомнить меня", class: "checkbox_label"
-        .actions
-          = f.submit "Войти", class: "default_button", style: "width:423px; margin-top:24px"
-      = render "devise/shared/links"
-      .body.text-secondary
-        | Выполняя вход, ты принимаешь наши Условия и&nbspПолитику конфиденциальности
+            = f.label :email, class: "input_label"
+            br
+            = f.text_field :email, autofocus: true, autocomplete: "email", class: "input_oneline", style: "width:423px; margin-bottom:12px"
+          .field
+            = f.label "Пароль", class: "input_label"
+            br
+            = f.password_field :password, autocomplete: "current-password", class: "input_oneline", style: "width:423px; margin-bottom: 24px"
+          - if devise_mapping.rememberable?
+            .field
+              = f.check_box :remember_me, class: "checkbox"
+              = f.label "Запомнить меня", class: "checkbox_label"
+          .actions
+            = f.submit "Войти", class: "default_button", style: "width:423px; margin-top:24px"
+        = render "devise/shared/links"
+        .body.text-secondary.centered.auto_margin
+          | Выполняя вход, ты принимаешь наши Условия и&nbspПолитику конфиденциальности
+      .hero2
