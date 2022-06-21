@@ -52,9 +52,39 @@ textarea { min-height: 160px; @include textarea_border; }
 .input_oneline {
   height: 60px;
   background-color: $bg-main;
-  border: 2px solid #bg-tertiary;
+  border: 2px solid $bg-tertiary;
   border-radius: 90px;
   padding: 0 24px;
+  @include button_text;
+  &::placeholder { color: $text-inactive; }
+}
+
+.input_label {
+  @include body;
+  position: relative;
+  left: 26px;
+  top: 12px;
+  background-color: $bg-main;
+}
+
+.checkbox {
+  height: 24px;
+  width: 24px;
+  background-color: $bg-tertiary;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance:none;
+  &:checked {
+    background-color: $palo-santo;
+  }
+}
+
+.checkbox_label {
+  position: absolute;
+  margin-left: 12px;
+  margin-top: 4px;
 }
 
 // отключает автофилльную подсветку
@@ -67,7 +97,5 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  background-color: #FFFFFF;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }

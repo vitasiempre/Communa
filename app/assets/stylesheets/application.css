@@ -21,3 +21,13 @@
  *, *::before, *::after, *:focus, *:valid {
    box-sizing: border-box;
  }
+
+ #login_card {
+   width: 450px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 54px 16px 16px 16px;
+   gap: 24px;
+ }
