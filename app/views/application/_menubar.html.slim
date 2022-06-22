@@ -2,6 +2,7 @@
   .profile
     .recognition
       .avatar_big
+       = image_tag(current_user.profile.avatar_url, class: 'avatar_big')
       .button_text
         = link_to current_user.profile.name, edit_user_path(current_user), class: 'invisible_link'
 

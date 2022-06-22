@@ -12,9 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2022_03_08_094810) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "blocklists", force: :cascade do |t|
     t.string "type"
     t.datetime "created_at", precision: 6, null: false
@@ -24,8 +21,8 @@ ActiveRecord::Schema.define(version: 2022_03_08_094810) do
   create_table "chat_list_items", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id"
-    t.bigint "chat_id"
+    t.integer "user_id"
+    t.integer "chat_id"
     t.index ["chat_id"], name: "index_chat_list_items_on_chat_id"
     t.index ["user_id"], name: "index_chat_list_items_on_user_id"
   end
@@ -38,8 +35,8 @@ ActiveRecord::Schema.define(version: 2022_03_08_094810) do
   create_table "favourites", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "profile_id"
-    t.bigint "user_id", null: false
+    t.integer "profile_id"
+    t.integer "user_id", null: false
     t.index ["profile_id"], name: "index_favourites_on_profile_id"
     t.index ["user_id"], name: "index_favourites_on_user_id"
   end
@@ -48,8 +45,8 @@ ActiveRecord::Schema.define(version: 2022_03_08_094810) do
     t.boolean "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "message_id", null: false
-    t.bigint "user_id", null: false
+    t.integer "message_id", null: false
+    t.integer "user_id", null: false
     t.index ["message_id"], name: "index_message_statuses_on_message_id"
     t.index ["user_id"], name: "index_message_statuses_on_user_id"
   end
@@ -58,14 +55,14 @@ ActiveRecord::Schema.define(version: 2022_03_08_094810) do
     t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id", null: false
-    t.bigint "chat_id", null: false
+    t.integer "user_id", null: false
+    t.integer "chat_id", null: false
     t.index ["chat_id"], name: "index_messages_on_chat_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.integer "user_id", null: false
     t.string "name"
     t.boolean "visibility"
     t.string "photo"
@@ -96,7 +93,7 @@ ActiveRecord::Schema.define(version: 2022_03_08_094810) do
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "profile_id"
+    t.integer "profile_id"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

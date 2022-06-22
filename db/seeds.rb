@@ -89,8 +89,9 @@ def create_profiles(user, user_data)
     instagram_link: user_data[:instagram_link]
   )
 
-  File.open('public/uploads/profile/avatar/1/thumb_1BE7D967-1BF5-4C85-B6BB-6C6077843C4A.jpeg') do |f|
+  File.open("db/images/avatar.png") do |f|
     profile.avatar = f
+    profile.save
   end
 end
 

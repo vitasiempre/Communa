@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'devise/session#new'
+  root 'profiles#index'
 
   devise_for :users
   resources :chat_list_items
